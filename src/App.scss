@@ -1,0 +1,63 @@
+@import './variables/variables.scss';
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 120px 0px;
+  
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $blue;
+  h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  h6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+.actual {
+  position: relative;
+
+  .actualTitle {
+    margin-bottom: 40px;
+  }
+
+}
+@media (max-width: $breakpoint_xl) {
+  $container-width: 910px;
+  .container {
+    width: $container-width;
+  }
+}
+@media (max-width: $breakpoint_lg) {
+  $container-width: 610px;
+  .container {
+    width: $container-width;
+  }
+}
+@media (max-width: $breakpoint_md) {
+  $container-width: 300px;
+  .container {
+    width: $container-width;
+    transform: translateX(10px);
+  }
+
+  .actualTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}

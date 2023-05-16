@@ -1,0 +1,89 @@
+@import "../../variables/variables";
+
+.root {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  @include control_table ($container-width);
+  .track {
+    width: 360px;
+    margin-right: 40px;
+  }
+  .track {
+    height: 1px;
+    background: $cyan;
+    .thumb {
+      width: 90px;
+      height: 1px;
+      transform: translateX(90px);
+      background: $blue;
+      transition: all .25s ease-in-out;
+    }
+  }
+  .buttonsWrap {
+    display: flex;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      width: 60px;
+      border: 1px solid $cyan;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      &:hover {
+        background: $cyan;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid $blue;
+        border-bottom: 0px;
+        border-left: 0px;
+      }
+      &Prev {
+        margin-right: 40px;
+        &:before {
+          transform: rotate(225deg);
+          margin-left: 7px;
+        }
+      }
+      &Next {
+        &:before {
+          transform: rotate(45deg);
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
+
+// Media
+
+@media (min-width: $breakpoint_xl) {
+  .root {
+    @include control_table ($container-width);
+  }
+}
+@media (max-width: $breakpoint_xl) {
+  $container-width: 910px;
+  .root {
+    @include control_table ($container-width);
+  }
+}
+@media (max-width: $breakpoint_lg) {
+  $container-width: 610px;
+  .root {
+    @include control_mobile($container-width - 50px);
+  }
+}
+@media (max-width: $breakpoint_md) {
+  $container-width: 280px;
+
+  .root {
+    @include control_mobile($container-width);
+  }
+}

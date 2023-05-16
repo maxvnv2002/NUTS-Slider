@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Slider from "./components/Slider";
+import {useEffect} from "react";
+import {store} from "./store";
+import * as actionTypes from "./store/actions";
+import {getOffsets, getRetreat} from "./functions/getOffsets";
 
 function App() {
+    useEffect(() => {
+        const actualSize = getOffsets(window.innerWidth)
+        const actualRetreat = getRetreat(window.innerWidth)
+        const activeSlide = actualRetreat
+
+        store.dispatch ({
+            type: actionTypes.cellUpdated,
+            payload: { actualSize, actualRetreat, activeSlide }
+        })
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className='actual'>
+          <div className='container'>
+              <h2 className='actualTitle'>Актуальное</h2>
+              <Slider/>
+          </div>
+      </div>
+  )
 }
 
 export default App;

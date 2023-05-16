@@ -1,0 +1,62 @@
+.container {
+  width: 1160px;
+  margin: auto auto;
+}
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 120px 0px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #527CCD;
+}
+body h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+}
+body h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+body p {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.actual {
+  position: relative;
+}
+.actual .actualTitle {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    width: 910px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    width: 610px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    width: 300px;
+    transform: translateX(10px);
+  }
+  .actualTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

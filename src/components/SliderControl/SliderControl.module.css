@@ -1,0 +1,116 @@
+.container {
+  width: 1160px;
+  margin: auto auto;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: calc((100vw - 1160px) / 2);
+}
+.root .track {
+  width: 360px;
+  margin-right: 40px;
+}
+.root .track {
+  height: 1px;
+  background: #C8D9FB;
+}
+.root .track .thumb {
+  width: 90px;
+  height: 1px;
+  transform: translateX(90px);
+  background: #527CCD;
+  transition: all 0.25s ease-in-out;
+}
+.root .buttonsWrap {
+  display: flex;
+}
+.root .buttonsWrap .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #C8D9FB;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.root .buttonsWrap .button:hover {
+  background: #C8D9FB;
+}
+.root .buttonsWrap .button:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #527CCD;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.root .buttonsWrap .buttonPrev {
+  margin-right: 40px;
+}
+.root .buttonsWrap .buttonPrev:before {
+  transform: rotate(225deg);
+  margin-left: 7px;
+}
+.root .buttonsWrap .buttonNext:before {
+  transform: rotate(45deg);
+  margin-right: 7px;
+}
+
+@media (min-width: 1199.98px) {
+  .root {
+    right: calc((100vw - 1160px) / 2);
+  }
+}
+@media (max-width: 1199.98px) {
+  .root {
+    right: calc((100vw - 910px) / 2);
+  }
+}
+@media (max-width: 991.98px) {
+  .root {
+    position: relative;
+    right: 0;
+  }
+  .root .buttonsWrap {
+    justify-content: space-between;
+    width: 560px;
+  }
+  .root .buttonsWrap .button {
+    height: 55px;
+    width: 55px;
+  }
+  .root .track {
+    position: absolute;
+    width: 410px;
+    left: 75px;
+    top: 27px;
+  }
+}
+@media (max-width: 767.98px) {
+  .root {
+    position: relative;
+    right: 0;
+  }
+  .root .buttonsWrap {
+    justify-content: space-between;
+    width: 280px;
+  }
+  .root .buttonsWrap .button {
+    height: 55px;
+    width: 55px;
+  }
+  .root .track {
+    position: absolute;
+    width: 130px;
+    left: 75px;
+    top: 27px;
+  }
+}
+
+/*# sourceMappingURL=SliderControl.module.css.map */

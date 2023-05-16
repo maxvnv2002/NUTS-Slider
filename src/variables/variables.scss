@@ -1,0 +1,44 @@
+// Colors
+$blue: #527CCD;
+$cyan: #C8D9FB;
+
+// General
+$container-width : 1160px;
+.container {
+  width: $container-width;
+  margin: auto auto;
+}
+
+$slider-item_margin : 40px;
+
+// Breakpoints
+$breakpoint_xxl: 1399.98px;
+$breakpoint_xl: 1199.98px;
+$breakpoint_lg: 991.98px;
+$breakpoint_md: 767.98px;
+$breakpoint_sm: 575.98px;
+
+// Mixins
+@mixin control_table ($width) {
+  right: calc((100vw - $width) / 2);
+}
+
+@mixin control_mobile ($width){
+  position: relative;
+  right: 0;
+  .buttonsWrap {
+    justify-content: space-between;
+    width: $width;
+    .button {
+      height: 55px;
+      width: 55px;
+    }
+  }
+  .track {
+    position: absolute;
+    width: calc($width - 110px - 40px);
+    left: 75px;
+    top: 27px;
+
+  }
+}

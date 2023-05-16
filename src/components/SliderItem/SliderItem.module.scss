@@ -1,0 +1,57 @@
+@import "../../variables/variables";
+
+.cell {
+  max-width: min-content;
+  min-width: 260px;
+  padding: 19px;
+  border: 1px solid $cyan;
+  text-decoration: none;
+  color: $blue;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border: 1px solid $blue;
+  }
+  img {
+    height: 160px;
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 10px;
+  }
+  .date {
+    opacity: 0.6;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: $breakpoint_xl) {
+
+  .cell {
+    margin-right: $slider-item_margin;
+  }
+}
+@media (max-width: $breakpoint_xl) {
+  $container-width: 910px;
+  .container {
+    width: $container-width;
+  }
+  .cell {
+    margin-right: $slider-item_margin;
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  $slider-item_margin: 10px;
+  .cell {
+    min-width: auto;
+    margin-right: $slider-item_margin;
+    img {
+      width: 240px;
+    }
+  }
+}

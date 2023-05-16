@@ -1,0 +1,57 @@
+.container {
+  width: 1160px;
+  margin: auto auto;
+}
+
+.cell {
+  max-width: min-content;
+  min-width: 260px;
+  padding: 19px;
+  border: 1px solid #C8D9FB;
+  text-decoration: none;
+  color: #527CCD;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.cell:hover {
+  border: 1px solid #527CCD;
+}
+.cell img {
+  height: 160px;
+  margin-bottom: 10px;
+}
+.cell .title {
+  margin-bottom: 10px;
+}
+.cell .date {
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1199.98px) {
+  .cell {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .container {
+    width: 910px;
+  }
+  .cell {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .cell {
+    min-width: auto;
+    margin-right: 10px;
+  }
+  .cell img {
+    width: 240px;
+  }
+}
+
+/*# sourceMappingURL=SliderItem.module.css.map */
