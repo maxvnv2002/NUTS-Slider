@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NUTS-Slider/static/css/main.9a273ffb.css",
+    "main.js": "/NUTS-Slider/static/js/main.dc2519a7.js",
+    "index.html": "/NUTS-Slider/index.html",
+    "main.9a273ffb.css.map": "/NUTS-Slider/static/css/main.9a273ffb.css.map",
+    "main.dc2519a7.js.map": "/NUTS-Slider/static/js/main.dc2519a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a273ffb.css",
+    "static/js/main.dc2519a7.js"
+  ]
+}
